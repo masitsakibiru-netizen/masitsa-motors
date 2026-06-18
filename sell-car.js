@@ -5,6 +5,31 @@ import {
   addDoc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+const imageInput =
+document.getElementById("image");
+
+if(imageInput){
+
+  imageInput.addEventListener(
+    "change",
+    function(){
+
+      const file = this.files[0];
+
+      if(file){
+
+        document.getElementById(
+          "imageStatus"
+        ).innerText =
+        "📷 Selected: " + file.name;
+
+      }
+
+    }
+  );
+
+}
+
 window.submitCar = async function(){
 
   const brand =
@@ -33,6 +58,11 @@ window.submitCar = async function(){
 
   try{
 
+    status.innerHTML = `
+      ⏳ Submitting your vehicle...
+      Please wait.
+    `;
+
     await addDoc(
       collection(db, "sellerCars"),
       {
@@ -48,15 +78,50 @@ window.submitCar = async function(){
       }
     );
 
-    status.innerText =
-    "Your car has been submitted for review.";
+    status.innerHTML = `
+
+      <div class="success-box">
+
+        <h3>✅ Submission Received</h3>
+
+        <p>
+        Your vehicle details have been received successfully.
+        </p>
+
+        <p>
+        Current Status:
+        <b>Pending Review</b>
+        </p>
+
+        <p>
+        Masitsa Motors will review your vehicle and contact you through the WhatsApp number or email provided.
+        </p>
+
+      </div>
+
+    `;
+
+    document.getElementById("brand").value = "";
+    document.getElementById("model").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("whatsapp").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("reason").value = "";
+    document.getElementById("image").value = "";
+
+    document.getElementById(
+      "imageStatus"
+    ).innerText =
+    "No image selected";
 
   }catch(error){
 
     console.log(error);
 
-    status.innerText =
-    "Submission failed.";
+    status.innerHTML = `
+      ❌ Submission failed.
+      Please try again.
+    `;
 
   }
 
