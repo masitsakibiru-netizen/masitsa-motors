@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masitsa Motors — Premium Car Dealership & Imports</title>
+  <meta name="description" content="Masitsa Motors — Nairobi's premier luxury car dealership. Browse imported vehicles, performance cars and elite automotive excellence.">
+  <meta name="google-site-verification" content="n3iQxTOuIplJPvcesMDrGt34cQ-04g7KiT62B3EdQLg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro">
+  <img src="imgs/logo.png" class="intro-logo" alt="Masitsa Motors">
+  <h1>Masitsa Motors</h1>
+  <p>Premium Car Dealership &amp; Imports</p>
+</div>
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <div class="logo">Masitsa Motors</div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="cars.html" class="btn">Browse Inventory</a>
+    <a href="sell-car.html">Sell Your Car</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Nairobi's Premier Dealership</span>
+    <h1>Luxury Performance.<br><span>Premium Experience.</span></h1>
+    <p>Explore world-class luxury cars, imported vehicles and elite automotive excellence — curated for the discerning driver.</p>
+    <div class="hero-buttons">
+      <a href="cars.html" class="primary-btn">Browse Inventory</a>
+      <a href="sell-car.html" class="sell-btn">🚗 Sell Your Car</a>
+      <a href="#contact" class="secondary-btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED CARS -->
+<section class="featured-cars" id="featured">
+  <div class="section-header">
+    <span class="section-label">Handpicked Selection</span>
+    <h2>Featured Luxury Cars</h2>
+    <p>Meticulously selected vehicles for those who demand nothing but the best</p>
+  </div>
+
+  <div class="featured-grid" id="featuredGrid">
+
+    <!-- CAR 1 -->
+    <div class="featured-card">
+      <img src="imgs/ford mustang gt.jpg" alt="Ford Mustang GT" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Performance</div>
+        <h3>Ford Mustang GT</h3>
+        <div class="car-price">Ksh 5,100,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'ford-mustang-gt')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Ford%20Mustang%20GT.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 2 -->
+    <div class="featured-card">
+      <img src="imgs/hero.jpg" alt="Mercedes S-Class AMG" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Luxury Sedan</div>
+        <h3>Mercedes S-Class AMG</h3>
+        <div class="car-price">Ksh 19,080,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'mercedes-s-class')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Mercedes%20S-Class%20AMG.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 3 -->
+    <div class="featured-card">
+      <img src="imgs/bmw m5 competition.jpg" alt="BMW M5 Competition" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Performance Coupe</div>
+        <h3>BMW M5 Competition</h3>
+        <div class="car-price">Ksh 9,800,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'bmw-m5')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20BMW%20M5%20Competition.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 4 -->
+    <div class="featured-card">
+      <img src="imgs/bentely continental gtc.jpg" alt="Bentley Continental GTC" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Ultra Luxury</div>
+        <h3>Bentley Continental GTC</h3>
+        <div class="car-price">Ksh 35,000,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'bentley-gtc')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Bentley%20Continental%20GTC.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 5 -->
+    <div class="featured-card">
+      <img src="imgs/tesla model s plaid.jpg" alt="Tesla Model S Plaid" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Electric</div>
+        <h3>Tesla Model S Plaid</h3>
+        <div class="car-price">Ksh 13,000,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'tesla-model-s')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Tesla%20Model%20S%20Plaid.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 6 -->
+    <div class="featured-card">
+      <img src="imgs/volvol xc90 recharge.jpg" alt="Volvo XC90" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Hybrid SUV</div>
+        <h3>Volvo XC90 Recharge</h3>
+        <div class="car-price">Ksh 7,990,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'volvo-xc90')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Volvo%20XC90%20Recharge.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 7 -->
+    <div class="featured-card">
+      <img src="imgs/porche (2).png" alt="Porsche 911 Turbo S" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Sports Car</div>
+        <h3>Porsche 911 Turbo S</h3>
+        <div class="car-price">Ksh 22,500,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'porsche-911')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Porsche%20911%20Turbo%20S.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 8 -->
+    <div class="featured-card">
+      <img src="imgs/range.png" alt="Range Rover Sport" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Luxury SUV</div>
+        <h3>Range Rover Sport</h3>
+        <div class="car-price">Ksh 14,800,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'range-rover-sport')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Range%20Rover%20Sport.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR 9 -->
+    <div class="featured-card">
+      <img src="imgs/Urus.png" alt="Lamborghini Urus" loading="lazy">
+      <div class="featured-info">
+        <div class="car-tag">Super SUV</div>
+        <h3>Lamborghini Urus</h3>
+        <div class="car-price">Ksh 38,000,000</div>
+        <div class="featured-actions">
+          <button class="like-btn" onclick="likeFeatured(this, 'lamborghini-urus')">
+            ❤️ <span class="like-count">0</span>
+          </button>
+          <a class="wa-btn-small"
+            href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20am%20interested%20in%20the%20Lamborghini%20Urus.%20Please%20send%20me%20more%20details."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Enquire
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-header">
+    <span class="section-label">Who We Are</span>
+    <h2>About Masitsa Motors</h2>
+  </div>
+  <p>
+    Masitsa Motors specializes in quality local and imported vehicles. We help customers find reliable, luxury,
+    and affordable cars with transparent pricing and excellent customer service — building lasting relationships
+    grounded in trust and automotive passion.
+  </p>
+</section>
+
+<!-- BRAND SLIDER -->
+<section class="brands">
+  <div class="section-header">
+    <span class="section-label">Our Partners</span>
+    <h2>Brands We Deal In</h2>
+  </div>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <img src="imgs/bmw.jfif" alt="BMW">
+      <img src="imgs/audi2.jfif" alt="Audi">
+      <img src="imgs/benz.jfif" alt="Mercedes">
+      <img src="imgs/toyota.jfif" alt="Toyota">
+      <img src="imgs/mazda.jfif" alt="Mazda">
+      <img src="imgs/landrover.jfif" alt="Land Rover">
+      <img src="imgs/acura.png" alt="Acura">
+      <img src="imgs/bently.png" alt="Bentley">
+      <img src="imgs/cadillac.png" alt="Cadillac">
+      <img src="imgs/chrysler.png" alt="Chrysler">
+      <img src="imgs/ferarri.png" alt="Ferrari">
+      <img src="imgs/ford.png" alt="Ford">
+      <img src="imgs/lamborghine.png" alt="Lamborghini">
+      <img src="imgs/lexus.png" alt="Lexus">
+      <img src="imgs/maseratti.png" alt="Maserati">
+      <img src="imgs/porche.png" alt="Porsche">
+      <img src="imgs/bugatti.jfif" alt="Bugatti">
+      <img src="imgs/chev.jfif" alt="Chevrolet">
+      <img src="imgs/honda.jfif" alt="Honda">
+      <img src="imgs/hyundai.jfif" alt="Hyundai">
+      <img src="imgs/jaguar.jfif" alt="Jaguar">
+      <img src="imgs/nissan.jfif" alt="Nissan">
+      <img src="imgs/subaru.jfif" alt="Subaru">
+      <img src="imgs/volvo.jfif" alt="Volvo">
+      <img src="imgs/vw.jfif" alt="Volkswagen">
+      <!-- Duplicates for seamless loop -->
+      <img src="imgs/bmw.jfif" alt="BMW">
+      <img src="imgs/audi2.jfif" alt="Audi">
+      <img src="imgs/benz.jfif" alt="Mercedes">
+      <img src="imgs/toyota.jfif" alt="Toyota">
+      <img src="imgs/mazda.jfif" alt="Mazda">
+      <img src="imgs/landrover.jfif" alt="Land Rover">
+      <img src="imgs/acura.png" alt="Acura">
+      <img src="imgs/bently.png" alt="Bentley">
+      <img src="imgs/cadillac.png" alt="Cadillac">
+      <img src="imgs/chrysler.png" alt="Chrysler">
+      <img src="imgs/ferarri.png" alt="Ferrari">
+      <img src="imgs/ford.png" alt="Ford">
+      <img src="imgs/lamborghine.png" alt="Lamborghini">
+      <img src="imgs/lexus.png" alt="Lexus">
+      <img src="imgs/maseratti.png" alt="Maserati">
+      <img src="imgs/porche.png" alt="Porsche">
+      <img src="imgs/bugatti.jfif" alt="Bugatti">
+      <img src="imgs/chev.jfif" alt="Chevrolet">
+      <img src="imgs/honda.jfif" alt="Honda">
+      <img src="imgs/hyundai.jfif" alt="Hyundai">
+      <img src="imgs/jaguar.jfif" alt="Jaguar">
+      <img src="imgs/nissan.jfif" alt="Nissan">
+      <img src="imgs/subaru.jfif" alt="Subaru">
+      <img src="imgs/volvo.jfif" alt="Volvo">
+      <img src="imgs/vw.jfif" alt="Volkswagen">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat-box">
+    <h2>500+</h2>
+    <p>Luxury Cars</p>
+  </div>
+  <div class="stat-box">
+    <h2>1,200+</h2>
+    <p>Happy Clients</p>
+  </div>
+  <div class="stat-box">
+    <h2>15+</h2>
+    <p>Global Brands</p>
+  </div>
+  <div class="stat-box">
+    <h2>24/7</h2>
+    <p>Support</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-header">
+    <span class="section-label">Get In Touch</span>
+    <h2>Contact Us</h2>
+    <p>Our team is ready to help you find your dream vehicle</p>
+  </div>
+  <div class="contact-container">
+    <div class="contact-box">
+      <i class="fas fa-phone"></i>
+      <h3>Phone</h3>
+      <a href="tel:+254743485587" class="contact-link">+254 743 485 587</a>
+    </div>
+    <div class="contact-box">
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <a href="mailto:masitsamotors@gmail.com?subject=Car Inquiry&body=Hello Masitsa Motors, I am interested in a vehicle." class="contact-link">masitsamotors@gmail.com</a>
+    </div>
+    <div class="contact-box">
+      <i class="fas fa-location-dot"></i>
+      <h3>Location</h3>
+      <p>Nairobi, Kenya</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#home">Home</a>
+      <a href="cars.html">Browse Inventory</a>
+      <a href="sell-car.html">Sell Your Car</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h3>Support</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Financing</a>
+      <a href="#">Warranty</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://instagram.com/masitsa__ke" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@masitsa__ke" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/Engmasitsa.ke" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/@Engmasitsa" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254743485587" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">© 2026 Masitsa Motors. All rights reserved. | Nairobi, Kenya</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20would%20like%20to%20inquire%20about%20your%20vehicles." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script type="module" src="script.js"></script>
+
+<script>
+// Navbar scroll effect
+const header = document.getElementById('mainHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu
+document.getElementById('menuToggle').addEventListener('click', function() {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('active');
+  this.innerHTML = nav.classList.contains('active')
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Close nav on link click
+document.querySelectorAll('#navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navbar').classList.remove('active');
+    document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+// Featured car likes (localStorage for persistence)
+function likeFeatured(btn, carId) {
+  const key = 'mm_like_' + carId;
+  const liked = localStorage.getItem(key);
+  const countEl = btn.querySelector('.like-count');
+  let count = parseInt(countEl.textContent) || 0;
+
+  if (liked) {
+    localStorage.removeItem(key);
+    btn.classList.remove('liked');
+    countEl.textContent = Math.max(0, count - 1);
+  } else {
+    localStorage.setItem(key, '1');
+    btn.classList.add('liked');
+    countEl.textContent = count + 1;
+  }
+}
+
+// Restore like states on page load
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.like-btn').forEach(btn => {
+    const onclickStr = btn.getAttribute('onclick');
+    const match = onclickStr && onclickStr.match(/'([^']+)'\)/);
+    if (match) {
+      const carId = match[1];
+      if (localStorage.getItem('mm_like_' + carId)) {
+        btn.classList.add('liked');
+        btn.querySelector('.like-count').textContent = '1';
+      }
+    }
+  });
+});
+
+window.likeFeatured = likeFeatured;
+</script>
+
+</body>
+</html>

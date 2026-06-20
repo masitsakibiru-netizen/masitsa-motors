@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Cars — Masitsa Motors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <div class="logo">Masitsa Motors</div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="cars.html" class="btn">Browse Inventory</a>
+    <a href="sell-car.html">Sell Your Car</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <h1>Browse Our Inventory</h1>
+    <p>Premium vehicles from top global brands — ready to drive</p>
+  </div>
+
+  <!-- MASITSA MOTORS INVENTORY -->
+  <section class="inventory">
+    <h2>🚗 Masitsa Motors Inventory</h2>
+    <div id="carGrid">
+      <div class="spinner-wrap"><div class="spinner"></div></div>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE -->
+  <section class="marketplace">
+    <h2>🏪 Local Cars Marketplace</h2>
+    <div id="marketplaceGrid">
+      <div class="spinner-wrap"><div class="spinner"></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/254743485587?text=Hello%20Masitsa%20Motors%2C%20I%20would%20like%20to%20browse%20your%20inventory." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+  // Navbar
+  const header = document.getElementById('mainHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 50));
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('active');
+    this.innerHTML = nav.classList.contains('active')
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+</script>
+
+<script type="module" src="cars.js"></script>
+<script type="module" src="market.js"></script>
+
+</body>
+</html>
