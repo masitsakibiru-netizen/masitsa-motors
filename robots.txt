@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masitsakibiru-netizen.github.io/masitsa-motors/sitemap.xml
